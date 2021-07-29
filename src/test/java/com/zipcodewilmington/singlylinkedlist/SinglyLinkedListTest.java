@@ -139,16 +139,31 @@ public class SinglyLinkedListTest {
     @Test
     public void makingACopyTest(){
         //given
-        int expected=7;
-        SinglyLinkedList actual = new SinglyLinkedList();
-        SinglyLinkedList node = new SinglyLinkedList();
-        node.addNode(7);
-        node.addNode(3);
-        node.addNode(2);
+        SinglyLinkedList list = new SinglyLinkedList();
+        SinglyLinkedList nod = new SinglyLinkedList();
+        list.addNode(7);
+        list.addNode(3);
+        list.addNode(2);
+        int expected =3;
         //when
-        actual=node.copy();
+        nod=list.copy();
+        int actual=nod.size();
         //then
-        Assert.assertEquals(node, actual);
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void sortTest(){
+        //given
+        SinglyLinkedList list = new SinglyLinkedList();
+        list.addNode(7);
+        list.addNode(3);
+        list.addNode(2);
+        int expected=2;
+        //when
+        list.sort();
+        int actual= list.get(0);
+        //then
+        Assert.assertEquals(expected, actual);
     }
 
 }
