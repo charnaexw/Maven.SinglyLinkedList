@@ -161,7 +161,7 @@ public class SinglyLinkedListTest {
         int expected=2;
         //when
         list.sort();
-        int actual= list.get(0);
+        int actual= list.get(1);
         //then
         Assert.assertEquals(expected, actual);
     }
